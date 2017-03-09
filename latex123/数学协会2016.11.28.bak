@@ -1,0 +1,27 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{amssymb}
+\usepackage[fleqn]{amsmath}
+\usepackage{enumerate}
+\usepackage{CJK}
+\usepackage{indentfirst}
+
+\pagestyle{fancy}
+\lhead{asdasd}
+\chead{dsads}
+\rhead{The performance of new graduates}
+\lfoot{明星眼镜}
+\cfoot{\hspace{-1.5in}地址：开发区广贤路38号(天星湖中学对面)}
+\rfoot{电话：15251319693QQ：852046329}
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\date{}
+\setlength{\parindent}{2em}
+\geometry{left=1.27cm,right=1.27cm,top=0pt,bottom=1.27cm}
+\title{\textbf{\small 高等数学——不定积分 \\  \emph{数学协会}\\$2016.11.28$}}
+%\author{\vspace{0pt} \textbf{\small 数学协会}}
+\begin{document}
+
+\end{document}

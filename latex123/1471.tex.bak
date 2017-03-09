@@ -1,0 +1,18 @@
+\documentclass{book}
+\usepackage{CJK}
+\usepackage{fancyhdr}
+%……
+\begin{document}
+\begin{CJK}{GBK}{song}
+\pagestyle{fancy}
+\fancyhead{} % clear all fields
+\fancyhead[RO,LE]{\CJKfamily{hei} \bfseries \LaTeX{} 排版系统}
+\fancyhead[LO,RE]{\CJKfamily{hei>} \bfseries \leftmark}
+\fancyfoot[LE,RO]{\thepage}
+\fancyfoot[LO,RE]{\CJKfamily{kai} 公元二零零零年七月}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+%……
+test!
+\end{CJK}
+\end{document}

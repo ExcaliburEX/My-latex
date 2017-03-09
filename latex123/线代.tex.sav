@@ -1,0 +1,49 @@
+
+\documentclass[UTF8]{ctexart}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{amssymb}
+\usepackage[fleqn]{amsmath}
+\usepackage{enumerate}
+\usepackage{CJK}
+\usepackage{indentfirst}
+\usepackage{bm}
+\pagestyle{fancy}
+\lhead{线代-第四章向量组的线性相关性}
+\chead{2016.12.12}
+\rhead{定义定理整理}
+%\lfoot{明星眼镜}
+%\cfoot{\hspace{-1.5in}地址：开发区广贤路38号(天星湖中学对面)}
+%\rfoot{}
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\date{}
+\setlength{\parindent}{2em}
+\geometry{left=1.27cm,right=1.27cm,top=1.27cm,bottom=1.27cm}
+%\title{\textbf{\small 高等数学——定积分及其应用 \\  \emph{数学协会}\\$2016.12.10$}}
+%\author{\vspace{0pt} \textbf{\small 数学协会}}
+\begin{document}
+
+
+\thispagestyle{fancy}
+\pagenumbering{Roman}
+\noindent  $\S1$ \quad 向量组的线性相关性
+\\ \textbf{定义1} \quad $n$个有次序的数$\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_n}$所组成的数组称为$n$维向量，这$n$个数称为该向量的$n$ 个分量，第$i$个数$a_i$称为第$i$个分量.
+\\ \textbf{定义2} \quad 给定向量组$A:\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_m},$对于任何一组实数$k_1,k_2,\cdot\cdot\cdot,k_m,$ 表达式
+$$k_1 \bm{a_1}+k_2\bm{a_2}+\cdot\cdot\cdot+k_m\bm{a_m}$$
+称为向量组$A$的一个线性组合，$k_1,k_2,\cdot\cdot\cdot,k_m$称为这个线性组合的系数.
+\\ \indent 给定向量组$A:\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_m}$和向量$\bm{b}$，如果存在一组数$\lambda_1,\lambda_2,\cdot\cdot\cdot,\lambda_m,$使$\bm{b}=\lambda_1\bm{a_1}+\lambda_2\bm{a_2}+\cdot\cdot\cdot+\lambda_m\bm{a_m}.$
+\\ 则向量$\bm{b}$是向量组$A$的线性组合，这时称向量$\bm{b}$能由向量A线性表示.
+\\ \indent 向量$\bm{b}$能由向量组$A$线性表示，也就是方程组$x_1\bm{a_1}+x_2\bm{a_2}+\cdot\cdot\cdot+x_m\bm{a_m}=\bm{b}$有解. 
+\\ \textbf{定理1}\quad 向量$\bm{b}$能由向量组$A:\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_m}$线性表示的充分必要条件是矩阵$A=(\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_m})$的秩等于矩阵$B=(\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_m},\bm{b})$的秩.
+\\ \textbf{定义3}\quad 设有两个向量组$A:\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_m}$及$B:\bm{b_1},\bm{b_2},\cdot\cdot\cdot,\bm{b_l}$，若$B$组中的每个向量都能由向量组$A$线性表示，则称向量组$B$能由向量组$A$线性表示.若向量组$A$与向量组$B$能相互线性表示，则称这两个\textbf{向量组等价}.
+\\ \textbf{定理2}\quad 向量组$B:\bm{b_1},\bm{b_2},\cdot\cdot\cdot,\bm{b_l}$能由向量组$A:\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_m}$线性表示充分必要条件是矩阵$A=(\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_m})$的秩等于矩阵$(A,B)=(\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_m},\bm{b_1},\bm{b_2},\cdot\cdot\cdot,\bm{b_l})$的秩，即$R(A)=R(A,B)$.
+\\ \textbf{推论}\quad 向量组$A:\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_m}$与向量组$B:\bm{b_1},\bm{b_2},\cdot\cdot\cdot,\bm{b_l}$等价的充分必要条件是$R(A)=R(B)=R(A,B)$,其中$A$和$B$是向量组$A$和$B$所构成的矩阵.
+\\ \textbf{定理3}\quad 设向量组$B:\bm{b_1},\bm{b_2},\cdot\cdot\cdot,\bm{b_l}$能由向量组$A:\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_m}$线性表示，则$R(\bm{b_1},\bm{b_2},\cdot\cdot\cdot,\bm{b_l})\leq R(\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_m})$.
+\\ \\ $\S2$\quad 向量组的线性相关性
+\\ \textbf{定义4}\quad 给定向量组$A:\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_m}$，如果存在不全为零的数$k_1,k_2,\cdot\cdot\cdot,k_m$,使$k_1\bm{a_m}+k_2\bm{a_2}+\cdot\cdot\cdot+k_m\bm{a_m}=0$,则称向量组$A$是线性相关的，否则称它线性无关.
+\\ 线性相关的几何意义是两向量共线，三个向量线性相关的几何意义是三向量共面.
+\\ \textbf{定理4}\quad 向量组$A:\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_m}$线性相关的充分必要条件是它所构成的矩阵$A=(\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_m})$的秩小于向量个数$m$;向量组$A$线性无关的充分必要条件$R(A)=m$.
+\\ 证明线性无关的一般方法是：写成矩阵等式$B=AK$,然后令$Bx=0$,通过
+
+\end{document}

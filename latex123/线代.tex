@@ -1,0 +1,115 @@
+
+\documentclass[UTF8]{ctexart}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{amssymb}
+\usepackage[fleqn]{amsmath}
+\usepackage{enumerate}
+\usepackage{CJK}
+\usepackage{indentfirst}
+\usepackage{bm}
+
+\pagestyle{fancy}
+\lhead{线代-第四章向量组的线性相关性}
+\chead{2016.12.12}
+\rhead{定义定理整理}
+%\lfoot{明星眼镜}
+%\cfoot{\hspace{-1.5in}地址：开发区广贤路38号(天星湖中学对面)}
+%\rfoot{}
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\date{}
+\setlength{\parindent}{2em}
+\geometry{left=1.27cm,right=1.27cm,top=1.27cm,bottom=1.27cm}
+%\title{\textbf{\small 高等数学——定积分及其应用 \\  \emph{数学协会}\\$2016.12.10$}}
+%\author{\vspace{0pt} \textbf{\small 数学协会}}
+\begin{document}
+
+
+\thispagestyle{fancy}
+\pagenumbering{Roman}
+\noindent  $\S1$ \quad 向量组的线性相关性
+\\ \textbf{定义1} \quad $n$个有次序的数$\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_n}$所组成的数组称为$n$维向量，这$n$个数称为该向量的$n$ 个分量，第$i$个数$a_i$称为第$i$个分量.
+\\ \textbf{定义2} \quad 给定向量组$A:\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_m},$对于任何一组实数$k_1,k_2,\cdot\cdot\cdot,k_m,$ 表达式
+$$k_1 \bm{a_1}+k_2\bm{a_2}+\cdot\cdot\cdot+k_m\bm{a_m}$$
+称为向量组$A$的一个线性组合，$k_1,k_2,\cdot\cdot\cdot,k_m$称为这个线性组合的系数.
+\\ \indent 给定向量组$A:\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_m}$和向量$\bm{b}$，如果存在一组数$\lambda_1,\lambda_2,\cdot\cdot\cdot,\lambda_m,$使$\bm{b}=\lambda_1\bm{a_1}+\lambda_2\bm{a_2}+\cdot\cdot\cdot+\lambda_m\bm{a_m}.$
+\\ 则向量$\bm{b}$是向量组$A$的线性组合，这时称向量$\bm{b}$能由向量A线性表示.
+\\ \indent 向量$\bm{b}$能由向量组$A$线性表示，也就是方程组$x_1\bm{a_1}+x_2\bm{a_2}+\cdot\cdot\cdot+x_m\bm{a_m}=\bm{b}$有解.
+\\ \textbf{定理1}\quad 向量$\bm{b}$能由向量组$A:\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_m}$线性表示的充分必要条件是矩阵$A=(\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_m})$的秩等于矩阵$B=(\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_m},\bm{b})$的秩.
+\\ \textbf{定义3}\quad 设有两个向量组$A:\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_m}$及$B:\bm{b_1},\bm{b_2},\cdot\cdot\cdot,\bm{b_l}$，若$B$组中的每个向量都能由向量组$A$线性表示，则称向量组$B$能由向量组$A$线性表示.若向量组$A$与向量组$B$能相互线性表示，则称这两个\textbf{向量组等价}.
+\\ \textbf{定理2}\quad 向量组$B:\bm{b_1},\bm{b_2},\cdot\cdot\cdot,\bm{b_l}$能由向量组$A:\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_m}$线性表示充分必要条件是矩阵$A=(\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_m})$的秩等于矩阵$(A,B)=(\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_m},\bm{b_1},\bm{b_2},\cdot\cdot\cdot,\bm{b_l})$的秩，即$R(A)=R(A,B)$.
+\\ \textbf{推论}\quad 向量组$A:\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_m}$与向量组$B:\bm{b_1},\bm{b_2},\cdot\cdot\cdot,\bm{b_l}$等价的充分必要条件是$R(A)=R(B)=R(A,B)$,其中$A$和$B$是向量组$A$和$B$所构成的矩阵.
+\\ \textbf{定理3}\quad 设向量组$B:\bm{b_1},\bm{b_2},\cdot\cdot\cdot,\bm{b_l}$能由向量组$A:\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_m}$线性表示，则$R(\bm{b_1},\bm{b_2},\cdot\cdot\cdot,\bm{b_l})\leq R(\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_m})$.
+\\ \\ $\S2$\quad 向量组的线性相关性
+\\ \textbf{定义4}\quad 给定向量组$A:\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_m}$，如果存在不全为零的数$k_1,k_2,\cdot\cdot\cdot,k_m$,使$k_1\bm{a_m}+k_2\bm{a_2}+\cdot\cdot\cdot+k_m\bm{a_m}=0$,则称向量组$A$是线性相关的，否则称它线性无关.
+\\ 线性相关的几何意义是两向量共线，三个向量线性相关的几何意义是三向量共面.
+\\ \textbf{定理4}\quad 向量组$A:\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_m}$线性相关的充分必要条件是它所构成的矩阵$A=(\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_m})$的秩小于向量个数$m$;向量组$A$线性无关的充分必要条件$R(A)=m$.
+\\ \emph{证明线性无关的一般方法是：写成矩阵等式$B=AK$,然后令$Bx=0$,通过证明方程只有零解$\bm{x}=\bm{0}$，所以向量组$\bm{B}$ 线性无关.}
+
+\noindent \textbf{定理5}\quad
+\\(1)若向量组$A:\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_m}$线性相关，则向量组$   B:\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_m},\bm{a_{m+1}}$也线性相关.反之，若向量组$B$线性无关，则向量组$A$也线性无关.
+\\ (2)$m$个$n$维向量组成的向量组，当维数$n$小于向量个数$m$时一定线性相关.特别地$n+1$个$n$维向量一定线性相关.
+\\ (3)设向量组$A:\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_m}$线性无关，而向量组$B:\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_m},\bm{b}$线性相关，则向量$\bm{b}$必能由向量组$A$线性表示，且表示式是惟一的.
+
+\noindent  $\S3$\quad 向量组的秩
+\\ \textbf{定义5} \quad 设有向量组$A$，如果在$A$中能选出$r$个向量$\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_r}$，满足
+\\ (1)向量组$A_0:\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_r}$线性无关；
+\\(2)向量组$A$中任意$r+1$个向量(如果$A$中有$r+1$个向量的话)都线性相关.
+\\ 那么称向量组$A_0$是向量组$A$的一个最大线性无关向量组(简称最大无关组)，最大无关组所含向量个数$r$称为向量组$A$的秩，记作$R_A$.
+
+\noindent \textbf{推论(最大无关组的等价定义)}\quad 设向量组$A_0:\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_r}$是向量组$A$的一个部分组，且满足
+
+\noindent  (1)向量组$A_0$线性无关；
+\\ (2)向量组$A$的任一个向量都能由向量组$A_0$线性表示，
+\\ 那么向量组$A_0$便是向量组$A$的一个最大无关组.
+\\ \emph{任何$n$个线性无关的$n$维向量都是$R^n$的最大无关组.}
+
+ \textbf{定理6}\quad 矩阵的秩等于它的列向量组的秩，也等于它的行向量组的秩.
+\\ \emph{最大无关组由首非零行的首非零元的列组成.}
+
+ \textbf{定理2’}\quad 向量组$\bm{b_1},\bm{b_2},\cdot\cdot\cdot,\bm{b_l}$能由向量组$ \bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_m}$线性表示充分必要条件是$R(\ bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_m})=R( \bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_m},\bm{b_1},\bm{b_2},\cdot\cdot\cdot,\bm{b_l}).$
+\\  \indent \textbf{定理3’}\quad 若向量组$B$能由向量组$A$线性表示，则$R_B\leq R_A.$
+
+ \noindent $\S4$\quad 线性方程组的解的结构
+ \\ \textbf{性质1} \quad 若$x=\xi_1,x=\xi_2$为线性齐次向量方程$\bm{Ax}=\bm{0}$的解，则$x=\xi_1+\xi_2$也是向量方程的解.
+ \\ \textbf{性质2} \quad 若$x=\xi_1$为向量方程$\bm{Ax}=\bm{0}$的解，$k$为实数，则$\bm{x}=k\xi_1$也是向量方程的解.
+ \\ \emph{齐次线性方程组的解集的最大无关组称为该齐次线性方程组的基础解系.}
+ \\ \textbf{定理7}\quad 设$m\times n$矩阵$A$秩$R(A)=r$，则$n$元齐次线性方程组$\bm{Ax}=\bm{0}$的解集$S$的秩$R_s=n-r.$
+ \\ \emph{重要结论：若$\bm{A}_{m\times n}\bm{B}_{n \times l}=\bm{O}$,则$R(A)+R(B) \leq n.$
+ \\$R(A^T)=R(A)$}
+ \\ \textbf{性质3}\quad 设$\bm{x}=\bm{\eta_1}$及$\bm{x}=\bm{\eta_2}$都是向量方程$\bm{Ax}=\bm{b}$的解，则$\bm{x}=\bm{\eta_1-\eta_2}$为对应的齐次线性方程组$\bm{Ax}=\bm{0}$的解.
+ \\ \textbf{性质4}\quad 设$\bm{x}=\bm{\eta}$是方程$\bm{Ax}=\bm{b}$的解，$\bm{x}=\bm{\xi}$是方程$\bm{Ax}=\bm{0}$的解，则$\bm{x}=\bm{\xi}+\bm{\eta}$仍是方程$\bm{Ax}=\bm{b}$的解.
+ \\ 非齐次方程的通解=对应的齐次方程的通解+非齐次方程的一个特解.
+ \\ $\S5$\quad 向量空间.
+ \\ \textbf{定义6}\quad 设$V$为$n$维向量的集合，如果集合$V$非空，且集合$V$对于向量的加法及数乘两种运算封闭，那么就称集合$V$为向量空间.
+ \\ \textbf{定义7}\quad 设有向量空间$V_1$及$V_2$,若$V_1 \subseteq V_2 $，就称$V_1$是$V_2$的子空间.
+ \\ \textbf{定义8}\quad 设$V$为向量空间，如果$r$个向量$\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_r}\in V$，且满足
+ \\ (1)$\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_r}$线性无关.
+ \\(2)$V$中任一向量都可由$\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_r}$表示.
+ \\ 那么，向量组$\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_r}$就称为向量空间的一个基，$r$称为向量空间$V$的维数，并称$V$为$r$维向量空间.
+ \\ \emph{若把向量空间看作向量组，它的基就是向量组的最大无关组，它的维数就是向量组的秩.}
+ 
+\noindent \textbf{定义9}\quad  如果在向量空间$V$中取定一个基$\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_r}$，那么$V$中任一向量$x$ 可惟一地表示为$\bm{x}=\lambda_1\bm{a_1}+\lambda_2 \bm{a_2}+\cdot\cdot\cdot+\lambda_r \bm{a_r}$，
+数组$\lambda_1,\lambda_2,\cdot\cdot\cdot,\lambda_r$称为向量$\bm{x}$在基$\bm{a_1},\bm{a_2},\cdot\cdot\cdot,\bm{a_r}$中的坐标.
+\\ 基变换公式：$(\bm{b_1},\bm{b_2},\bm{b_3})=(\bm{a_1},\bm{a_2},\bm{a_3})P$，其中$P=A^{-1}B$.
+\\ 坐标变换公式：
+\begin{equation}       %开始数学环境
+\left[                %左括号
+  \begin{array}{ccc}   %该矩阵一共3列，每一列都居中放置
+   z_1\\  %第一行元素
+    z_2\\  
+    z_3%第二行元素
+  \end{array}
+\right]
+=P^{-1}{
+\left[                %左括号
+  \begin{array}{ccc}   %该矩阵一共3列，每一列都居中放置
+   y_1\\  %第一行元素
+    y_2\\
+    y_3%第二行元素
+  \end{array}
+\right]}
+\end{equation}
+
+\end{document}

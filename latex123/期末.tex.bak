@@ -1,0 +1,62 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{amssymb}
+\usepackage[fleqn]{amsmath}
+\usepackage{enumerate}
+\usepackage{CJK}
+\usepackage{indentfirst}
+\usepackage{bm}
+
+%\fancyfoot[RO]{\parbox{15em}{\hrule\vspace{5pt}\rightline\thepage}}
+%\fancyfoot[LE]{\parbox{15em}{\hrule\vspace{5pt}\leftline\thepage}}
+
+\pagestyle{fancy}
+\lhead{数学协会期末专项练习暨圣诞元旦大礼包}
+\chead{\quad \quad \quad 2016.12.15}
+\rhead{极限积分篇}
+\lfoot{明星眼镜}
+\cfoot{\hspace{-1.5in}地址：开发区广贤路38号(天星湖中学对面)}
+\rfoot{电话：15251319693QQ：852046329}
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\date{}
+\setlength{\parindent}{2em}
+\geometry{left=1.27cm,right=1.27cm,top=1.27cm,bottom=1.27cm}
+\begin{document}
+\thispagestyle{fancy}
+ \vspace{-8mm} \section{极限篇}
+ (1)$\displaystyle{\lim_{x \to \alpha}\frac{sinx-sin\alpha}{x-\alpha}}$ \quad\quad\quad (2)$\displaystyle{\lim_{x \to 0}(1+tan^2x)^{cot^2x}}$ \quad\quad\quad (3)$\displaystyle{\lim_{x \to 0}\frac{\sqrt{1+tanx}-\sqrt{1+sinx}}{x\sqrt{1+sin^2x}-x}}$
+ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\
+ (4)$\displaystyle{\lim_{x \to 0}\frac{tanx-sinx}{x^3}}$ \quad\quad\quad (5)$\displaystyle{\lim_{x \to 0}(\frac{a^x+b^x+c^x}{3})^{\frac{1}{x}}}(a>0,b>0,c>0)$ \quad\quad\quad (6)$\displaystyle{\lim_{x \to -\infty}x(\sqrt{x^2+100}+x)}$
+ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\
+ (7)$\displaystyle{\lim_{x \to \infty}\frac{\sqrt{4x^2+x-1}+x+1}{\sqrt{x^2+sinx}}}$\quad \quad (8)$\displaystyle{\lim_{x \to 0}\frac{1}{x^3}[(\frac{2+cosx}{3})^x-1]}$ \quad \quad (9)$\displaystyle{\lim_{x \to 0}\frac{(1+x)^{\frac{1}{x}}-e}{x}}$\quad \quad (10)$\displaystyle{\lim_{n \to \infty }n^2(2^{\frac{1}{n}}-2^{\frac{1}{n+1}})}$
+ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\
+ (11)$\displaystyle{\lim_{n \to \infty} (\frac{1}{n^2+n+1}+\frac{2}{n^2+n+2}+\cdot\cdot\cdot+\frac{n}{n^2+n+n})}$
+ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\
+ (12)$\displaystyle{\lim_{x \to 0}\frac{\sqrt{1+xarctan3x}-1}{sin(1-cosx)}}$ \quad \quad  \quad (13)$\displaystyle{\lim_{x \to 0}\frac{sin[sin(sinx)]}{\sqrt{1+x\sqrt{1+x}} -1}}$\quad \quad \quad (14)$\displaystyle{\lim_{x \to +\infty}(sin\frac{1}{x}+cos\frac{1}{x})^x}$
+ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\
+ (15)$\displaystyle{\lim_{x \to 0}\frac{cosx-e^{-\frac{x}{2}}}{x^2sinxln(1+2x)}}$\quad\quad\quad (16)$\displaystyle{\lim_{x \to \infty}(\sqrt[3]{x^3+3x^2}-\sqrt[4]{x^4-2x^3})}$ \quad\quad\quad(17)$\displaystyle{\lim_{n \to \infty}[(n^3-n^2+\frac{n}{2})e^{\frac{1}{n}}-\sqrt{1+n^6}]}$
+ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\
+ (18))$\displaystyle{\lim_{x \to \frac{\pi}{3} }\frac{tan^3x-3tanx}{cos(x+\frac{\pi}{6})}}$\quad\quad\quad(19)$\displaystyle{\lim_{x \to +\infty }\frac{ln(1+\frac{1}{x})}{arccosx}}$\quad\quad\quad(20)$\displaystyle{\lim_{n \to \infty}sin(\sqrt{n^2+1}\pi)}$
+ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\
+ (21)$\displaystyle{\lim_{n \to \infty }n^2[arctan\frac{1}{n}-arctan\frac{1}{n+1}]}$ \quad\quad\quad (22)$\displaystyle{\lim_{x \to 0}\frac{(1+tanx)^{\frac{1}{tanx}}-(1+sinx)^{\frac{1}{sinx}}}{tanx-sinx}}$
+ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\
+  \vspace{-8mm} \section{积分篇}
+  (1) $\displaystyle{\int \frac{lntanx}{cosxsinx}dx}$ \quad\quad\quad(2)$\displaystyle{\int sin5xsin7xdx}$\quad\quad\quad (3)$\displaystyle{\int \frac{dx}{(x+1)(x-2)}}$\quad\quad(4)$\displaystyle{\int \frac{x^2dx}{\sqrt{a^2-x^2}}}$
+  \\ \\ \\ \\ \\ \\ \\ \\ \\ \\
+  \quad \quad \quad \quad(5)$\displaystyle{\int \frac{dx}{x\sqrt{x^2-1}}}$ \quad\quad\quad (6)$\displaystyle{\int \frac{\sqrt{x^2-9}}{x}dx}$
+  \quad\quad\quad(7)$\displaystyle{\int \frac{dx}{1+\sqrt{1-x^2}}}$\quad\quad(8)$\displaystyle{\int \frac{dx}{x+\sqrt{1-x^2}}}$
+   \\ \\ \\ \\ \\ \\ \\ \\ \\ \\
+   (9)$\displaystyle{\int \frac{x-1}{x^2+2x+3}dx}$\quad\quad\quad (10)$\displaystyle{\int \frac{x^3+1}{(x^2+1)^2}dx}$\quad\quad\quad(11)$\displaystyle{\int x^2cos^2\frac{x}{2}dx}$\quad\quad\quad(12)$\displaystyle{\int xln(x-1)dx}$
+   \\ \\ \\ \\ \\ \\ \\ \\ \\ \\
+   (13)$\displaystyle{\int \frac{ln^3x}{x^2}dx}$\quad\quad\quad(14)$\displaystyle{\int coslnxdx}$\quad\quad\quad(15)$\displaystyle{\int (arcsinx)^2dx}$\quad\quad\quad(16)$\displaystyle{\int e^xsin^2xdx}$
+   \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\
+   (17)$\displaystyle{\int \frac{1+sinx}{sinx(1+cosx)}dx}$\quad \quad\quad (18)$\displaystyle{\int \frac{-x^2-2}{(x^2+x+1)^2}dx}$\quad\quad\quad(19)$\displaystyle{\int \frac{dx}{2+sinx}}$\quad\quad\quad(20)$\displaystyle{\int \frac{dx}{2sinx-cosx+5}}$
+   \\ \\ \\ \\ \\ \\ \\ \\ \\ \\
+   (21)$\displaystyle{\int \frac{\sqrt{x+1}-1}{\sqrt{x+1}+1}dx}$\quad\quad\quad(22)$\displaystyle{\int \frac{dx}{\sqrt[3]{(x+1)^2(x-1)^4}}}$\quad\quad\quad(23)$\displaystyle{\int \frac{dx}{\sqrt{x(1+x)}}}$\quad\quad\quad(24)$\displaystyle{\int \frac{x^3arccosx}{\sqrt{1-x^2}}dx}$
+   \\ \\ \\ \\ \\ \\ \\ \\ \\ \\
+   (25)$\displaystyle{\int \frac{sinxcosx}{sinx+cosx}dx}$\quad\quad\quad(26)$\displaystyle{\int \frac{dx}{sin2x+2sinx}dx}$\quad\quad\quad(27)$\displaystyle{\int  e^{2x}(tanx+2)^2dx}$
+   \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\
+   (28)$\displaystyle{\int \frac{arctan\sqrt{x}+lnx}{\sqrt{x}}dx}$\quad\quad\quad\quad\quad\quad(29)$\displaystyle{\int \frac{2x^4-x^3-x+1}{x^3-1}dx }$\quad\quad\quad(30)$\displaystyle{\int \frac{sinx}{sinx+cosx}dx}$
+    \end{document} 

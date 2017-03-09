@@ -1,0 +1,27 @@
+\documentclass{article}
+\usepackage[bf, small]{titlesec}
+\titleformat{\section}{\bf\large}{\thesection.\,}{0.24em}{}
+\titlespacing{\section}{0cm}{*1.5}{*1.1}
+\titleformat{\subsection}{\it}{\thesubsection.\enspace}{0.5em}{}
+\titlespacing{\subsection}{0.5cm}{*4}{*1.5}
+\author{My Name}
+\title{The Title}
+\begin{document}
+\maketitle
+hello, world % This is comment
+
+\begin{equation}\label{eq:array}
+T_{srl}\left\{
+\begin{array}{ll}
+S_{r}+1&\tau_{acc}<0\\
+S_{r}&\text{其它}\\
+\end{array}
+\right.
+\hspace{1em}
+T_{srr}=\left\{\begin{array}{ll}
+S_{r}+1&\tau_{acc}>0\\
+S_{r}&\text{其它}\\
+\end{array}\right.
+\end{equation}
+
+\end{document}

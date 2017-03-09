@@ -1,0 +1,145 @@
+
+\documentclass[UTF8]{ctexart}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{amssymb}
+\usepackage[fleqn]{amsmath}
+\usepackage{enumerate}
+\usepackage{CJK}
+\usepackage{indentfirst}
+
+\pagestyle{fancy}
+\lhead{asdasd}
+\chead{dsads}
+\rhead{The performance of new graduates}
+\lfoot{明星眼镜}
+\cfoot{\hspace{-1.5in}地址：开发区广贤路38号(天星湖中学对面)}
+\rfoot{电话：15251319693QQ：852046329}
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\date{}
+\setlength{\parindent}{2em}
+\geometry{left=1.27cm,right=1.27cm,top=0pt,bottom=1.27cm}
+\title{\textbf{\small 高等数学——定积分及其应用 \\  \emph{数学协会}\\$2016.12.10$}}
+%\author{\vspace{0pt} \textbf{\small 数学协会}}
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+\vspace{-20mm} \textbf{\small 写在前面的话:前面我们说过对于不定积分的理解是函数的集合，与之相对的，这里我们强调定积分的实质意义是一块区域的面积，是对一块不规则图形用无穷细分的方法求其面积的重要工具。这一章我们要掌握其性质，计算方法，广义积分以及它的具体的实际应用方法。}
+\vspace{-8mm} \section{定积分}
+\vspace{-4mm} \subsection{概念}  \vspace{-2mm} \small 定义
+\\ $\displaystyle{\int _a^b f(x)dx =\lim_{\lambda \to 0} \sum_{i=1}^n f(\xi_i)\Delta x_i}$
+\\可积条件：(1)若$f(x)$在$[a,b]$上连续，则$f(x)$在$[a,b]$上可积.
+\\(2)若$f(x)$是在$[a,b]$上只有有限个间断点的有界函数，则$f(x)$在$[a,b]$上可积.
+\\例1 利用定积分求极限：$\displaystyle{\lim_{n \to \infty} (\frac{1}{\sqrt{4n^2-1^2}}+\frac{1}{\sqrt{4n^2-2^2}}+\cdot\cdot\cdot+\frac{1}{\sqrt{4n^2-n^2}})}$
+\\解：$\displaystyle{f(\xi_i)=\frac{1}{\sqrt{4-\xi_i}}=\frac{1}{\sqrt{4-(\frac{i}{n})^2}},\Delta x_i=\frac{1}{n}}$
+\\则$\displaystyle{\lim_{n \to \infty} \sum_{i=1}^n \frac{1}{\sqrt{4n^2-i^2}}=\lim_{n \to \infty} \frac{1}{\sqrt{4-(\frac{i}{n})^2}}\cdot\frac{1}{n}=\lim_{n \to \infty} \frac{1}{\sqrt{4-\xi^2}}\cdot\Delta x_i}$
+\\=$\displaystyle{\int_0^1 \frac{1}{\sqrt{4-x^2}}dx}$
+\vspace{-4mm} \subsection{定积分中值定理} \vspace{-2mm}\small 若$f(x)$在$[a,b]$上连续，则在$[a,b]$上至少存在一点$\xi$，使得$$\displaystyle{\int _a^b f(x)dx=f(\xi)(b-a)}$$
+\\例2 设$f(x)$在$[0,1]$上连续，且$f(x)$在$(0,1)$上可导，又$3\displaystyle{\int_{\frac{2}{3}}^1 f(x)dx=f(0)}$，证明：至少存在一点$\xi\in (0,1)$，使$f'(\xi)=0$.(结合定积分中值定理与罗尔定理证明)
+%\begin{CJK}{UTF8}{fs}
+%\begin{CJK}{UTF8}{fs}
+
+\vspace{-4mm} \subsection{变上限积分} \vspace{-2mm} 求导法则($\displaystyle{\int_a^x f(t)dt }$是$[a,b]$上连续函数$f(x)$的一个原函数.)
+\\ (1)$\displaystyle{\frac{d}{dx} \int _a^x f(t)dt=f(x)}$;
+\\(2)$\displaystyle{\frac{d}{dx}\int_a^{\beta(x)} f(t)dt=f[\beta(x)]\beta'(x) }$;
+\\ (3)$\displaystyle{\frac{d}{dx}\int_{\alpha(x)}^{\beta(x)} f(t)dt=f[\beta(x)]\beta'(x)-f[\alpha(x)]\alpha'(x)} $
+\\ 例3 设函数$f(x)$连续，且$f(0)\neq 0$，求极限：$\displaystyle{\lim_{x \to 0} \frac{\int _0^x (x-t)f(t)dt}{x\int_0^x f(x-t)dt}.}$
+\\解：解决此类问题一般需要用洛必达法则.
+\\(令$x-t=u$)因$\displaystyle{\int_0^x f(t)dt=\int_x^0 f(u)(-du)=\int_0^x f(u)du.}$
+\\原式=$\displaystyle{\lim_{x \to 0} \frac{x\int_0^xf(t)dt-\int_0^xtf(t)dt}{x\int_0^xf(u)du}}$
+\\$=\displaystyle{\frac{\int_0^x f(t)dt+xf(x)-xf(x)}{\int_0^x f(u)du+xf(x)}=\lim_{x \to 0} \frac{\int_0^x f(t)dt}{\int _0^x f(u)du+xf(x)}\xrightarrow{\mbox{积分中值定理}}\lim_{x \to 0}\frac{xf(\xi)}{xf(\xi)+xf(x)}=\frac{f(0)}{f(0)+f(0)}}$
+\\$\displaystyle{=\frac{1}{2}}$(因$x\rightarrow 0$时，$\xi\rightarrow 0$，且$f(x)$连续.)
+\vspace{-4mm} \subsection{定积分计算方法} \vspace{-2mm} $Newton-Leibniz$公式
+\\$$\displaystyle{\int_a^b f(x)dx=F(b)-F(a)} $$
+除此以外，定积分的换元积分法与分部积分法与不定积分区别不大，我们着重强调奇偶性与周期性.
+\\ 奇偶性：设$f(x)$在$[-a,a]$上连续，若$f(x)$是奇函数，则$\displaystyle{\int_{-a}^a f(x)dx=0} $.若$f(x)$是偶函数，则$\displaystyle{\int_{-a}^a f(x)dx=2\int_0^a f(x)dx} $
+\\ 例如 $\displaystyle{\int_{-1}^1 x^3e^{-x^2}=0 }$(奇乘偶为奇)，$\displaystyle{\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} sin^4x dx=2\int _0^\frac{\pi}{2} sin^4xdx}$(之后可以利用$\displaystyle{\int _0^\frac{\pi}{2} sin^ndx}$的公式求解.)
+\\ 周期性：设$f(x)$是定义在$(-\infty,+\infty)$上以$T$为周期的周期函数，$a$为任意常数，则$\displaystyle{\int_a^{a+T} f(x)dx=\int _0^T f(x)dx}$.
+\\ 例4 $\displaystyle{\int _0^{100\pi} \sqrt{1-cos2x}dx=\int_0^{100\pi} \sqrt{2sin^2x}dx=\sqrt{2}\int_0^{100\pi}|sinx|dx}$
+\\ $f(x)=|sinx|$是以$\pi$为周期的周期函数.
+\\ 原式=$\displaystyle{\sqrt{2}(\int_0^{\pi}|sinx|dx+\int_\pi^{2\pi}|sinx|dx)+\cdot\cdot\cdot+\int_{99\pi}^{100\pi}|sinx|dx}$
+\\$=\displaystyle{100\sqrt{2} \int_0^\pi |sinx|dx}$
+\\$=\displaystyle{100\sqrt{2}\int_0^\pi sinxdx}$
+\\$=\displaystyle{100\sqrt{2}(-cosx)|_0^\pi=200\sqrt{2}}$
+\\ 常用积分公式:
+\\ (1)$\displaystyle{\int_{-a}^a f(x)dx=\int _0^a [f(x)+f(-x)]dx}.$
+\\(2)$\displaystyle{\int_0^\pi xf(sinx)dx=\frac{\pi}{2}\int_0^\pi f(sinx)dx.}$
+\\(3)$\displaystyle{\int _0^{\frac{\pi}{2}} f(sinx)dx=\int _0^{\frac{\pi}{2}} f(cosx)dx.}$
+\\(4)$\displaystyle{\int _0^{\frac{\pi}{2}} sin^nxdx =\int _0^{\frac{\pi}{2}} cos^nxdx=\left\{
+\begin {array}{rcl}
+\frac{n-1}{n}\cdot\frac{n-3}{n-2}\cdot\cdot\cdot\frac{3}{4}\cdot\frac{1}{2}\cdot\frac{\pi}{2},\mbox{n为正偶数}\\
+\frac{n-1}{n}\cdot\frac{n-3}{n-2}\cdot\cdot\cdot\frac{4}{5}\cdot\frac{2}{3}\cdot1,\mbox{n为大于1的奇数.}
+\end{array}\right.}$
+
+
+
+\vspace{-4mm} \subsection{广义积分}  \vspace{-2mm} \small (1)无穷限的广义积分.
+\\若$f(x)$在积分区间连续，则
+$$\displaystyle{\int_a^{+\infty}f(x)dx=\lim_{b \to +\infty} \int_a^b f(x)dx(a<b);}$$
+$$\displaystyle{\int_{-\infty}^b f(x)dx=\lim_{a \to -\infty} \int_a^b f(x)dx(a<b);}$$
+$$\displaystyle{\int_{-\infty}^{+\infty}f(x)dx=\lim_{a \to -\infty} \int _a^0 f(x)dx+\lim_{b \to +\infty} \int _0^b f(x)dx}.$$
+(2)无界函数的广义积分.
+\\若$f(x)$在$(a,b]$上连续，在点$a$的右邻域内无界，则
+$$\displaystyle{\int_a^b f(x)dx=\lim_{\epsilon \to 0^+}\int_{a+\epsilon}^b f(x)dx(0<\epsilon<b-a)}.$$
+若$f(x)$在$[a,b)$上连续，在点$b$的左邻域内无界，则
+$$\displaystyle{\int_a^b f(x)dx=\lim_{\epsilon \to 0^+}\int_{a}^{b-\epsilon} f(x)dx(0<\epsilon<b-a)}.$$
+若$f(x)$在$[a,c)$及$(c,b]$上连续，在点$c$的邻域内无界，则
+$$\displaystyle{\int_a^b f(x)dx=\lim_{\epsilon \to 0^+}\int_{a}^{c-\epsilon} f(x)dx+\lim_{\epsilon' \to 0^+}\int_{c+\epsilon'}^b f(x)dx(0<\epsilon<c-a,0<\epsilon'<b-c)}.$$
+以上定义中，若极限存在，则广义积分收敛，否则称其发散.
+\\例5 计算$\displaystyle{\int_{-\infty}^{+\infty} \frac{1}{1+x^2}dx.}$
+\\解：$\displaystyle{\int_{-\infty}^{+\infty} \frac{1}{1+x^2}dx=\int_{-\infty}^0 \frac{1}{1+x^2}dx+\int_0^{+\infty} \frac{1}{1+x^2}dx}$
+\\$=\displaystyle{\lim_{a \to -\infty}\int_a^0 \frac{dx}{1+x^2}+\lim_{b \to +\infty}\int_0^b \frac{dx}{1+x^2}}$
+\\$=\displaystyle{\lim_{a \to -\infty} arctan|_0^a+\lim_{b \to +\infty} arctan|_0^b}$
+\\$=\displaystyle{-(-\frac{\pi}{2})+\frac{\pi}{2}}$
+\\$=\pi.$
+\\不能写成$\displaystyle{\int_{-\infty}^{+\infty} \frac{1}{1+x^2}dx=\lim_{a \to +\infty} \int_{-a}^a \frac{1}{1+x^2}dx}.$
+\\若$\displaystyle{\lim_{a \to +\infty} \int_{-a}^a \frac{1}{1+x^2}dx}$存在，不能保证收敛，称此极限值为$\displaystyle{\int_{-\infty}^{+\infty} \frac{1}{1+x^2}dx}$的柯西主值，记为：
+$$P.V.\displaystyle{\int_{-\infty}^{+\infty} \frac{1}{1+x^2}dx=\lim_{a \to +\infty} \int_{-a}^a \frac{1}{1+x^2}dx}.$$
+\\$\varGamma$——函数
+\\广义积分$\displaystyle{\varGamma(p)=\int _0^{+\infty} x^{p-1} e^{-x}dx}$，当$p>0$时，其收敛.
+\\性质:(1)$\displaystyle{\varGamma(1)=1}$
+\\(2)$\displaystyle{\varGamma(p+1)=p\varGamma(p)}$
+\\(3)$\displaystyle{\varGamma(n+1)=n!(n\in N)}$
+\vspace{-8mm} \section{几何物理应用}几何应用
+\\1.平面图形面积
+\\(1)直角坐标：$S=\displaystyle{\int_a^b |g(x)-f(x)|dx.}$
+\\(2)极坐标:$S=\displaystyle{\frac{1}{2}\int_\alpha^\beta |r_2^2(\theta)-r_1^2(\theta)|d\theta}.$
+\\2.体积
+\\(1)平行截面面积的立体的体积：$\displaystyle{V=\int_a^b A(x)dx.}$
+\\(2)旋转体体积:$\displaystyle{V=\int_a^b \pi f^2(x)dx.}$
+\\3.平面曲线的弧长
+\\(1)直角坐标：$\displaystyle{s=\int_a^b \sqrt{1+f'^2(x)dx}.}$
+\\(2)参数方程：$\displaystyle{s=\int_\alpha^\beta \sqrt{\varphi'^2(t)+\psi'^2(t)}dt}.$
+\\(3)极坐标：$\displaystyle{s=\int_\alpha^\beta \sqrt{r^2(\theta)+r'^2(\theta)}d\theta}$
+\\物理应用
+\\1.变力沿直线做功：$\displaystyle{\int_a^b F(x)dx.}$
+\\2.液体的侧压力:$\displaystyle{\int_a^b \gamma xf(x)dx.}$($\gamma$为液体密度.)
+\\函数值的平均值
+\\$\displaystyle{\tilde{y}=\frac{1}{b-a} \int_a^b f(x)dx.}$
+
+\centerline{\textbf{本章练习}}
+
+\begin{enumerate}[(1)]
+\item $\displaystyle{\int_1^{\sqrt{3}} \frac{dx}{x^2\sqrt{1+x^2} } }$
+\item $\displaystyle{\int_{-\frac{\pi}{2}}^\frac{\pi}{2} 4cos^4\theta d\theta} $
+\item 证明$\displaystyle{\int _x^1 \frac{dt}{1+t^2}=\int_1^{\frac{1}{x}} \frac{dt}{1+t^2}.}$
+\item $\displaystyle{\int_0^{+\infty} e^{-pt}sin\omega tdt(p>0,\omega>0)}$
+
+
+\item $\displaystyle{\lim_{n\to \infty} \frac{1^p+2^p+\cdot\cdot\cdot+n^p}{n^{p+1}}(p>0})$
+\item $\displaystyle{\int_0^{\frac{\pi}{2}} \sqrt{1-sin2x}dx}$
+\item $\displaystyle{\int_0^{+\infty} \frac{dx}{1+x^4}}.$
+\item 设函数$f(x)$在$[0,1]$上连续，在$(0,1)$内可导，且$2\displaystyle{\int_0^{\frac{1}{2}} xf(x)dx=f(1).$证明：在$(0,1)$内至少存在一点$\xi$，使$f'(\xi)=-\displaystyle{\frac{f(\xi)}{\xi}}$
+\item 利用泰勒公式求极限式 $\lim\limits_{x \to 0} \dfrac{cosx-e^{-\frac{x^2}{2}}}{x^2[x+ln(1-x)]}.$
+\item 要造一圆柱形油罐，体积为$V$，问底半径$r$和高$h$各等于多少时，才能使表面积最小？这时底直径与高的比是多少？
+\item 已知曲线满足$x^3+y^3-3axy=0$，求该曲线的斜渐近线.
+\item 设$a_0+\dfrac{a_1}{2}+\cdot \cdot \cdot+\dfrac{a_n}{n+1}=0$，证明多项式$f(x)=a_0+a_1x+\cdot\cdot\cdot+a_nx^n.$
+\item 证明当$e<a<b<e^2$时，$ln^2b-ln^2a>\dfrac{4}{e^2}(b-a)$.
+\item 曲线弧$y=sinx(0<x<\pi)$上哪一点的曲率半径最小？求出该点处的曲率半径.
+\item $\lim\limits_{x \to \infty} [\dfrac{(a_1^{\frac{1}{x}}+a_2^{\frac{1}{x}}+\cdot\cdot\cdot+a_n^{\frac{1}{x}})}{n}]^{nx}(\mbox{其中}a_1,a_2,\cdot\cdot\cdot a_n>0).$
+\item 设$f(x)$在$(a,b)$内二阶可导，且$f''(x)\geq 0. $证明对于$(a,b)$内任意两点$x_1,x_2$及$0\leq t\leq1$，有
+$$f[(1-t)x_1+tx_2]\leq(1-t)f(x_1)+tf(x_2)$$
+\end{enumerate}
+\end{document}

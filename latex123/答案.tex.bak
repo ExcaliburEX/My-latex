@@ -1,0 +1,30 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{amssymb}
+\usepackage[fleqn]{amsmath}
+\usepackage{enumerate}
+\usepackage{CJK}
+\usepackage{indentfirst}
+\usepackage{bm}
+
+%\fancyfoot[RO]{\parbox{15em}{\hrule\vspace{5pt}\rightline\thepage}}
+%\fancyfoot[LE]{\parbox{15em}{\hrule\vspace{5pt}\leftline\thepage}}
+
+\pagestyle{fancy}
+\lhead{圣诞元旦大礼包答案}
+\chead{\quad \quad \quad 2016.12.15}
+\rhead{极限积分篇}
+\lfoot{明星眼镜}
+\cfoot{\hspace{-1.5in}地址：开发区广贤路38号(天星湖中学对面)}
+\rfoot{电话：15251319693QQ：852046329}
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\date{}
+\setlength{\parindent}{2em}
+\geometry{left=1.27cm,right=1.27cm,top=1.27cm,bottom=1.27cm}
+\begin{document}
+\thispagestyle{fancy}
+ \vspace{-8mm} \section{极限篇}
+ (1)$cos\alpha$ \quad\quad\quad(2)$e^3$\quad\quad\quad(3)$\frac{1}{2}$\quad\quad\quad(4)$\frac{1}{2}$\quad\quad\quad(5)$(abc)^{\frac{1}{3}}$
+     \end{document} 

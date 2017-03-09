@@ -1,0 +1,19 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{amssymb}
+\usepackage[fleqn]{amsmath}
+\usepackage{enumerate}
+\usepackage{CJK}
+\usepackage{indentfirst}
+
+
+\date{}
+
+\geometry{left=1.27cm,right=1.27cm,top=0pt,bottom=1.27cm}
+\title{\textbf{\small 高等数学——不定积分 \\  \emph{数学协会}\\$2016.11.28$}}
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+次讲义补充内容较多，中值定理
+\end{document}

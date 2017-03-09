@@ -1,0 +1,24 @@
+\documentclass{article}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+                       % 清除原有设置
+\fancyhead[RE]{这是奇数页右页眉}   % 左内侧
+\fancyhead[LO]{这是偶数页左页眉}  % 右内侧
+\fancyhead[LE,RO]{这是奇数页或偶数页中间页眉}  % 左、右外侧
+\fancyfoot[LE]{这是奇数页左页脚}  % 左外侧
+\fancyfoot[LO]{这是偶数页左页脚 }     % 右内侧
+\fancyfoot[RO]{这是偶数页右页脚} % 右外侧
+\renewcommand{\headrulewidth}{0.5pt}%在页眉下画一个0.5pt宽的分隔线
+\renewcommand{\footrulewidth}{0pt} % 在页脚不画分隔线。
+\title{Hello World}
+\begin{document}
+
+\section{Hello China} China is in East Asia.
+\subsection{Hello Beijing} Beijing is the capital of China.
+\subsubsection{Hello Dongcheng District}
+\paragraph{Tian'anmen Square}is in the center of Beijing
+\subparagraph{Chairman Mao} is in the center of Tian'anmen Square
+\subsection{Hello Guangzhou}
+\paragraph{Sun Yat-sen University} is the best university in Guangzhou.
+\end{document}

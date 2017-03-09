@@ -1,0 +1,18 @@
+\documentclass{article}
+\usepackage{CJK}
+\setcounter{page}{6}
+\setlength\textheight{100.0pt}
+\setlength\textwidth{200.0pt}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{layout}
+%\pagestyle{empty}                   %不设置页眉页脚
+\footskip = 10pt
+\pagestyle{fancy}                    % 设置页眉
+\begin{CJK}{GBK}{kai}\end{CJK}
+\lhead{page \thepage\ of \pageref{LastPage}}
+\chead{页眉中间}
+\rhead{\small\leftmark}
+\cfoot{\thepage}
+\rfoot{页脚左}%
+\lfoot{页脚右}                  

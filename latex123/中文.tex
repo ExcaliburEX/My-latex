@@ -1,0 +1,173 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{amssymb}
+\usepackage[fleqn]{amsmath}
+\usepackage{enumerate}
+\usepackage{CJK}
+\usepackage{indentfirst}
+
+\pagestyle{fancy}
+\lhead{asdasd}
+\chead{dsads}
+\rhead{The performance of new graduates}
+\lfoot{明星眼镜}
+\cfoot{\hspace{-1.5in}地址：开发区广贤路38号(天星湖中学对面)}
+\rfoot{电话：15251319693QQ：852046329}
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\date{}
+\setlength{\parindent}{2em}
+\geometry{left=1.27cm,right=1.27cm,top=0pt,bottom=1.27cm}
+\title{\textbf{\small 高等数学——微分中值定理和导数应用 \\  \emph{数学协会}\\$2016.11.14$}}
+%\author{\vspace{0pt} \textbf{\small 数学协会}}
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+\vspace{-20mm} \textbf{\small 楔子:各位敬好，转眼11月已过半，相信大家对于高数的学习热情一定是，下降了。莫道征途路漫漫，愿效江水去不换。本次讲义补充内容较多，中值定理部分若是深究必定是很困难的，故只将所有定理罗列加上一些例题供各位选做，证明一概省略。不过所有与书本不同的证明过程会上传至群。通过微分中值定理可以建立函数值与导数之间的定量关系，从而将复杂问题化为简单问题，这种论证思想是非常重要的数学思想。}
+\vspace{-8mm} \section{微分中值定理} \vspace{-2mm} \small 中值定理存在到底有什么意义？它是导数应用的理论基础，并且也是利用$y=f(x)$ 的导数$[f'(x),f''(x)]$ 来研究曲线$y=f(x)$的性态$($单调性，求函数的极值、最值，凹凸性，拐点，作图$)$的理论基础。
+\\\indent目前有这样几种中值定理：罗尔定理$(Rolle)$，拉格朗日定理$(Lagrange)$，柯西定理$(Cauchy)$，泰勒定理$(Taylor)$。我们分别介绍它们。$($因为不介绍证明过程，故省略费马引理$(Fermat))$
+\vspace{-4mm} \subsection{罗尔定理}  \vspace{-2mm} \small 若$f(x)\in\subset[a,b]$，$f(x)\in D(a,b)$且$f(a)=f(b)$，则至少存在一点$\xi\in(a,b)$，使$f'(\xi)=0$.
+\vspace{-4mm} \subsection{拉格朗日中值定理} \vspace{-2mm}\small 设$f(x)\in\subset[a,b]$，$f(x)\in D(a,b)$，则至少存在一点$\xi\in(a,b)$使
+$$f'(\xi)=\frac{f(b)-f(a)}{b-a}$$
+\begin{CJK}{UTF8}{fs}
+拉格朗日定理的其他形式：
+\begin{enumerate}[(1)]
+\item $f(b)-f(a)=f'(\xi)(b-a)$，其中$\xi$介于$a$与$b$之间$(a$,$b$大小没有关系$)$
+\item 设$f(x)$在$[a,b]$满足$Lagrange$定理条件，$\forall x\in [a,b]$，且有增量$\Delta x((x+\Delta x)\in [a,b])$，$\Delta x>0$或$\Delta x<0$.则$f(x)$在$[x,x+\Delta x](\Delta x>0)$或在$[x+\Delta x,x](\Delta x<0)$满足$Lagrange$条件，则有:$f(x+\Delta x)-f(x)=f'(\xi)\Delta x$其中$\xi$介于$a$与$b$之间.
+\item $\because \xi$介于$x$与$x+\Delta x$之间，必有$0<\theta<1$，使$\xi=x+\theta x$.\quad$\therefore f(x+\Delta x)-f(x)=f'(x+\theta x)\Delta x$.$($有限增量公式$)$
+\end{enumerate}
+\end{CJK}
+例1\quad 利用$Lagrange$定理证明当$x>1$时，$e^x>ex$.
+\\例2\quad 证明:对任意常数$a$，$b$都有$|arctana-arctanb|\leq |a-b|$.
+\\例3\quad 设$f(x)\in D^2[1,2]$，$f(1)=f(2)=0$，$F(x)=(x-1)^2f(x)$，证明至少存在一点$\xi\in(1,2)$，使$F''(\xi)=0$.
+\begin{CJK}{UTF8}{fs}
+\vspace{-4mm} \subsection{柯西中值定理} \vspace{-2mm} 设$f(x)$、$g(x)\in\subset[a,b]$，$f(x)$、$g(x)\in D(a,b)$，且$g'(x)\neq0$，则至少存在一点$\xi\in(a,b)$，使
+$$\frac{f(b)-f(a)}{g(b)-g(a)}=\frac{f'(\xi)}{g'(\xi)}$$
+可以将柯西中值定理理解为拉格朗日定理在参数方程中应用时产生的形式。
+\vspace{-4mm} \subsection{泰勒中值定理} \vspace{-2mm} 设$f(x)$、$g(x)\in\subset[a,b]$，$f(x)\in D^{n+1}(a,b)(f(x)$在$(a,b)$内有直至$n+1$阶导数$)$，若$x_0\in(a,b)$，则至少存在一点$\xi\in(a,b)$，对$\forall x\in(a,b)$，有
+$$f(x)=f(x_0)+f'(x_0)(x-x_0)+\frac{f''(x_0)}{2!}(x-x_0)^2+\cdot \cdot \cdot+\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n+R_n (x) $$
+其中$$R_n(x)=\frac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_0)^{n+1}(\xi\mbox{介于}x_0\mbox{与}x\mbox{之间})$$
+\\特别地，当$x_0 =0$时，$$f(x)=f(0)+\sum_{k=1}^n \frac{f^{(k)}(0)}{k!}x^k+R_n (x)$$
+$$\mbox{其中}R_n (x)=\frac{f^{(n+1)}(\xi)}{(n+1)!}x^{n+1}(\xi\mbox{介于}0\mbox{与}x\mbox{之间})$$称为$f(x)$的$n$阶麦克劳林公式.$R_n (x)$ 称为$n$ 阶泰勒余项.
+\\$R_n (x)$有以下两种形式：
+\vspace{-4mm}
+\\\begin{enumerate}[(1)]
+\item 拉格朗日形式$$R_n (x)=\frac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_0)^{n+1}(\xi\mbox{介于}0\mbox{与}x\mbox{之间})$$
+\item 佩亚诺余项
+\\由$f(x)\in D^{n+1}(a,b)$，对$x_0\in(a,b)$，在$N(x_0,\delta)$内$f(x)$有直至$n+1$阶导数.
+\\从而$$R_n(x)=f(x)-\sum_{k=1}^n \frac{f^{(k)}(x_0)}{k!}(x-x_0)^k$$
+利用洛必达法则可推：$$\lim_{x \to x_0} \frac{R_n (x)}{(x-x_0)^n} = 0.$$
+当$x\rightarrow x_0$时，$R_n (x)=o(x-x_0)^n$称为泰勒公式$n$阶余项$R_n (x)$的佩亚诺公式.
+\\带有佩亚诺余项的麦克劳林公式：$$f(x)=f(0)+\sum_{k=1}^n \frac{f^{(k)}(0)}{k!}x^n+o(x^n)$$
+例4\quad 求$f(x)=e^x$的$n$阶麦克劳林公式.
+\\ \textbf{解} $\because$ $f(x)=f'(x)=f''(x)=\cdot\cdot\cdot=f^{(n+1)}(x)=e^x,f(0)=f'(0)=f''(0)=\cdot\cdot\cdot=f^{(n+1)}(0)=e^0=1$
+\\$f(x)=f(0)+f'(0)x+\dfrac{f''(0)}{2!}(x^2+\cdot \cdot \cdot+\dfrac{f^{(n)}(0)}{n!}x^n+\dfrac{f^{(n+1)}(\xi)}{(n+1)!}x^{n+1}$
+\\ $\therefore e^x=1+x+\dfrac{1}{2!}x^2+\cdot\cdot\cdot+\dfrac{1}{n!}x^n+\dfrac{e^\xi}{(n+1)!}x^{n+1}$其中$\xi$介于0与$x$之间.
+\\取$e^x \approx 1+x+\dfrac{1}{2!}x^2+\cdot\cdot\cdot+\dfrac{1}{n!}x^n$，误差为$|R_n(x)|=|\dfrac{e^\xi}{(n+1)!}x^{n+1}|$
+\\$\because\xi$介于0与$x$之间，$\therefore |\xi|<|x|$，$|e^\xi|<e^{|\xi|}<e^{|x|}$，$\therefore |R_n(x)|\leq \dfrac{e^{|x|}}{(n+1)!}|x|^{n+1}. $
+\\当$x=1$时，$e\approx 1+1+\dfrac{1}{2!}+\dfrac{1}{3!}+\cdot\cdot\cdot+\dfrac{1}{n!},|R_n(x)|\leq \dfrac{e}{(n+1)!}$
+\\若取 $n=7$，$e\approx 1+1+\dfrac{1}{2!}+\dfrac{1}{3!}+\cdot\cdot\cdot+\dfrac{1}{7!}$，误差为$|R_7|\leq\dfrac{e}{(7+1)!}<\dfrac{3}{8!}<10^{-4}.$所以$e\approx 2.7183.$
+\\例5\quad 求$f(x)=sinx$的$2m$阶麦克劳林公式.
+\end{enumerate}
+\end{CJK}
+\vspace{-8mm} \section{洛必达(L’Hospital)法则} \vspace{-2mm} \small 综合洛必达法则的定理与推论有以下定义：
+\\\begin{enumerate}[(1)]
+\vspace{-4mm} \item $f(x)$，$\varphi(x)$在$N(\hat{x_0},\delta)$或$|x|>N>0$时有定义，且若满足下式任意一个
+
+\vspace{-6mm}
+
+\[
+\begin{cases}
+\lim\limits_{x \to x_0} f(x)= 0\\
+\lim\limits_{x \to x_0} \varphi(x) = 0
+\end{cases}
+\]
+
+
+\vspace{-20mm}
+\[\hspace{1in}
+\begin{cases}
+\lim\limits_{x \to \infty} f(x)= 0\\
+ \lim\limits_{x \to \infty} \varphi(x) = 0
+\end{cases}
+\hspace{1in}\]
+
+ \vspace{-20mm}
+\[\hspace{2in}
+\begin{cases}
+\lim\limits_{x \to x_0} f(x)= \infty\\
+ \lim\limits_{x \to x_0} \varphi(x) = \infty
+\end{cases}
+\hspace{2in}\]
+
+\vspace{-21mm}
+\[\hspace{3.6in}
+\begin{cases}
+\lim\limits_{x \to \infty} f(x)= \infty\\
+ \lim\limits_{x \to \infty} \varphi(x) = \infty
+\end{cases}
+\hspace{3.6in}\]
+
+\vspace{5mm}\item $f(x)$，$\varphi(x)$在$N(\hat{x_0},\delta)$，或当$|x|>N$，$f'(x)$，$\varphi'(x)$存在，且$\varphi'(x)\neq0$.
+\item $\lim\limits_{x \to x_0} \dfrac {f'(x)}{\varphi'(x)}$ ,$\lim\limits_{x \to \infty} \dfrac {f'(x)}{\varphi'(x)}$ 存在(或为$\infty$),则
+$$\lim\limits_{x \to x_0} \frac {f(x)}{\varphi(x)}=\lim\limits_{x \to x_0} \frac {f'(x)}{\varphi'(x)}$$
+$$\lim\limits_{x \to \infty} \frac {f'(x)}{\varphi'(x)}=\lim\limits_{x \to \infty} \frac {f'(x)}{\varphi'(x)}$$
+\end{enumerate}
+计算过程中要注意，当用到洛必达法则求极限时，$\lim \dfrac {f'(x)}{\varphi'(x)}$不存在时,$\lim \dfrac {f(x)}{\varphi(x)}$ 仍可能存在，需用其他方法求出结果。此外，永远要记住二点.\\第一，面对极限式首先要将可以等价无穷小替换的先替换掉，然后才用法则去计算；\\第二，每一步运算都要判断分式是否满足当$x \rightarrow 0$ 或$\infty$ 时,上下关系为“$\dfrac{\infty}{\infty}$” 或者“$\dfrac{0}{0}$”；\\当你面对一个极限式没有头绪时，往往就需要用洛必达法则去求解。除了上面的“$\dfrac{\infty}{\infty}$”和“$\dfrac{0}{0}$” 两种关系外，还有“$0\cdot \infty$”如$\lim\limits_{x \to 0^+} x^nlnx$，“$\infty-\infty$”,“$0^0$”，“$1^\infty$”，“$\infty^0$”等类型的未定式，都可以运用洛必达法则去求解。同学们需在做题中体会。
+\\例6\quad $\lim\limits_{x \to 0} \dfrac{x-sinx}{xsin^2x}$\quad\ \quad\ 例7\quad$\lim\limits_{x \to 0^+}x^nlnx(n>0)$
+\quad\ 例8\quad $\lim\limits_{x \to 0^+}(tanx)^{sinx}$
+\\原式$\Rightarrow(x\sim sinx)\Rightarrow\lim\limits_{x \to 0} \dfrac{x-sinx}{x^3}("\dfrac{0}{0}")\Rightarrow\lim\limits_{x \to 0} \dfrac{1-cosx}{3x^2}("\dfrac{0}{0}")\Rightarrow\lim\limits_{x \to 0} \dfrac{sinx}{6x}\Rightarrow(x\sim sinx)\Rightarrow\dfrac{1}{6}.$
+\vspace{-4mm} \subsection{曲线的凹凸性与拐点}  \vspace{-2mm} \small \textbf{定义\quad 设$f(x)$在区间$I$上连续，如果对$I$ 上任意两点$x_1$，$x_2$恒有$$f(\frac{x_1+x_2}{2})<\frac{f(x_1)+f(x_2)}{2}$$
+那么称$f(x)$在$I$上的图形是向上凹的；如果恒有$$f(\frac{x_1+x_2}{2})>\frac{f(x_1)+f(x_2)}{2}$$
+那么称$f(x)$在$I$上的图形是向上凸的.
+\\除此之外，我们还可以通过二阶导数来判断函数的凹凸。\\
+\\定理\quad 设$f(x)$在$[a,b]$上连续，在$(a,b)$内具有一阶和二阶导数，那么
+\\$1.$若在$(a,b)$内$f''(x)>0$，则$f(x)$在$[a,b]$上图形是凹的；
+\\$2.$若在$(a,b)$内$f''(x)<0$，则$f(x)$在$[a,b]$上图形是凸的.}
+\\ 一般地，如果曲线在经过某点$(x_0,f(x_0))$时，凹凸性改变了，那么该点就是曲线的\textbf{拐点}.
+\\ 寻找拐点的方法：一般先求出$f''(x)$，然后令$f''(x)$等于0，求出实根$x_0$以及$f''(x)$不存在的点，判断在$x_0$和$f''(x)$不存在的点的左右两侧的符号，当符号相反时则$x_0$即为拐点.
+\\ 例9\quad 求曲线$y=2x^3+3x^2-12x+14$的拐点.
+\vspace{-4mm} \subsection{函数极值}  \vspace{-2mm} \small 对于极值存在的第一、第二充分条件要熟记，其中第二充分条件要注意是在$f'(x_0)=0$的情况下，来判断$f''(x_0)$的正负，而其正负与极值情况正好相反。对于此类问题只需先求出导数等于0的点，进而列表讨论清楚即可.
+\\例10\quad 求函数$f(x)=(x^2-1)^3+1$的极值.
+\\\textbf{解}\quad $f'(x)=6x(x^2-1)^2.$
+\\令$f'(x)=0$，求得驻点(导数等于0的点)$x_1=-1$，$x_2=0$，$x_3=1$.
+\\$f''(x)=6(x^2-1)(5x^2-1).$
+\\因$f''(0)=6>0$,$f(x)$在$x=0$处取得极小值，极小值为$f(0)=0$.
+\\$f''(-1)=f''(1)=0$，无法判别，然而当$x<-1$时$f'(x)<0$，当$x>-1$时，$f'(x)<0$，$f'(x)$的符号没有改变，所以$f(x)$在$x=-1$处无极值.同理在$x=1$处也没有极值.
+\vspace{-4mm} \subsection{曲率}  \vspace{-2mm} \small 对于曲率推导过程较为复杂，结合图形程度强。有意者可向社团索取相关资料。在此简单介绍。首先推导出弧微分公式，进而可推导出曲率公式：
+$$K=\frac{|y''|}{(1+y'^2)^{3/2}}.$$
+曲率的实际意义是用来表达某条曲线在某点处的弯曲程度，曲率值越大说明弯曲程度越大。对于圆来说，曲率处处相等。曲率半径是曲率的倒数.
+\\例11\quad 求椭圆$4x^2+y^2=4$在点(0,2)处的曲率.
+
+\textbf{关于渐近线的相关知识
+\begin{enumerate}[(1)]
+\item 水平渐近线：当$\lim\limits_{x \to \infty} f(x)=C$时，则$y=C$为曲线$f(x)$的水平渐近线.
+\item 垂直渐近线：当$\lim\limits_{x \to a} f(x)=\infty$时，则$x=a$为曲线$f(x)$的垂直渐近线.
+\item 斜渐近线：$\lim\limits_{x \to \infty} \dfrac{f(x)}{x}=k,\lim\limits_{x \to \infty} [f(x)-kx]=b$，则$y=kx+b$为曲线$f(x)$的斜渐近线.
+\end{enumerate}}
+
+\centerline{\textbf{本章练习}}
+
+\begin{enumerate}[(1)]
+\item 不用求出函数$f(x)=(x-1)(x-2)(x-3)(x-4)$的导数，说明方程$f'(x)=0$有几个实根，并指出它们所在的区间.
+\item 证明恒等式：$arcsinx+arccosx=\dfrac{\pi}{2}(-1\leq x \leq 1).$
+\vspace{-2mm}\item 设$a>b>0$，证明：$\dfrac{a-b}{a}<ln\dfrac{a}{b}<\dfrac{a-b}{b}.$
+\item 证明$|arctan a-arctan b|\leq |a-b|.$
+\item $\lim\limits_{x \to 0^+} x^{sinx} $
+\item $\lim\limits_{x \to 0^+} (\dfrac{1}{x})^{tanx}$
+\item 求函数$f(x)=\sqrt{x}$按$(x-4)$的幂展开的带有拉格朗日型余项的3阶泰勒公式.
+\item 求函数$f(x)=lnx$按$(x-2)$的幂展开的带有佩亚诺型余项的$n$阶泰勒公式.
+\item 验证当$0<x\leq \dfrac{1}{2}$时，按公式$e^x\approx 1+x+\dfrac{x^2}{2}+\dfrac{x^3}{6}$计算$e^x$的近似值时，所产生的误差小于0.01，并求$\sqrt{e}$的近似值，使误差小于0.01.
+\item 利用泰勒公式求极限式 $\lim\limits_{x \to 0} \dfrac{cosx-e^{-\frac{x^2}{2}}}{x^2[x+ln(1-x)]}.$
+\item 要造一圆柱形油罐，体积为$V$，问底半径$r$和高$h$各等于多少时，才能使表面积最小？这时底直径与高的比是多少？
+\item 已知曲线满足$x^3+y^3-3axy=0$，求该曲线的斜渐近线.
+\item 设$a_0+\dfrac{a_1}{2}+\cdot \cdot \cdot+\dfrac{a_n}{n+1}=0$，证明多项式$f(x)=a_0+a_1x+\cdot\cdot\cdot+a_nx^n.$
+\item 证明当$e<a<b<e^2$时，$ln^2b-ln^2a>\dfrac{4}{e^2}(b-a)$.
+\item 曲线弧$y=sinx(0<x<\pi)$上哪一点的曲率半径最小？求出该点处的曲率半径.
+\item $\lim\limits_{x \to \infty} [\dfrac{(a_1^{\frac{1}{x}}+a_2^{\frac{1}{x}}+\cdot\cdot\cdot+a_n^{\frac{1}{x}})}{n}]^{nx}(\mbox{其中}a_1,a_2,\cdot\cdot\cdot a_n>0).$
+\item 设$f(x)$在$(a,b)$内二阶可导，且$f''(x)\geq 0. $证明对于$(a,b)$内任意两点$x_1,x_2$及$0\leq t\leq1$，有
+$$f[(1-t)x_1+tx_2]\leq(1-t)f(x_1)+tf(x_2)$$
+\end{enumerate}
+\end{document}

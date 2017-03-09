@@ -1,0 +1,14 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{fancyhdr}
+\usepackage{lipsum}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L,R]{Test \texttt{'fancyhdr'}}
+\fancyfoot[C]{\parbox{3em}{\hrule\vspace{4pt}\centering\thepage}}
+% Preamble goes below
+
+\begin{document}
+
+\lipsum[1-8]
+
+\end{document}

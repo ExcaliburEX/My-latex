@@ -1,0 +1,105 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{amssymb}
+\usepackage[fleqn]{amsmath}
+\usepackage{enumerate}
+\usepackage{CJK}
+\usepackage{indentfirst}
+
+\pagestyle{fancy}
+\lhead{asdasd}
+\chead{dsads}
+\rhead{The performance of new graduates}
+\lfoot{明星眼镜}
+\cfoot{\hspace{-1.5in}地址：开发区广贤路38号(天星湖中学对面)}
+\rfoot{电话：15251319693QQ：852046329}
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\date{}
+\setlength{\parindent}{2em}
+\geometry{left=1.27cm,right=1.27cm,top=0pt,bottom=1.27cm}
+\title{\textbf{\small 高等数学——不定积分 \\  \emph{数学协会}\\$2016.11.30$}}
+%\author{\vspace{0pt} \textbf{\small 数学协会}}
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+\vspace{-20mm} \textbf{\small 楔子:不定积分在计算上要讨论的问题是，已知导函数则如何求它的原函数。而对于一个不定积分式可以理解为一系列函数的集合。对于解题大致需要掌握三种解题方法加上有理函数的积分。此外对于基础的积分表要熟记，它与导数表正好相反。一般情况下运用基础积分表内的知识就可解决复合函数的积分，只有当这种方法解决不了问题时，才会用到以下的一些方法。}
+\vspace{-6mm} \subsection{第一类换元法(凑微分法)} \vspace{-2mm} \small 它是复合函数求导数的逆运算，这种方法在求不定积分中经常使用，但比利用复合函数求导法则求导数要困难，因为方法中的$\varphi (x)$隐含在被积函数中如何适当选择$u=\varphi (x)$，把积分中$\varphi (x) dx$“凑”成$du$没有一般规律可循，所以多做练习，熟练掌握各种形式的“凑微分”方法是关键，这也是对微分运算熟练程度的检验，因为事实上任何一个凑微分运算公式都可以作为凑微分的途径。
+\\ \textbf{其一般表述为 设$f(u)$具有原函数，$u=\varphi (x)$可导，则有换元公式$$\int f[\varphi (x)]\varphi '(x)dx=[\int f(u)du]_{u=\varphi (x)}$$}\vspace{-2mm}
+\\  例1\quad  求$  \displaystyle{\int 2cos2x dx}$.
+\\ \textbf{解：} 被积函数中，$cos2x$是一个复合函数：$cos2x=cosu$，$u=2x$，常数因子恰好是中间变量$u$的导数.因此，作变换$u=2x$，便有
+\\ $ \displaystyle{\int 2cos2xdx=\int cos2x\cdot 2dx=\int cos2x \cdot(2x)' dx=\int cosudu =sinu+C}$，
+\\ 再以$u=2x$代入，即得$$\int 2cos2xdx=sin2x+C.$$
+常用的凑微分公式：
+\\$\displaystyle{\int f(ax+b)dx}=\frac{1}{a}\displaystyle{\int f(ax+b)d(ax+b)(a\neq 0)}$；
+\quad \quad\quad\quad\quad\quad\quad\quad\quad$\displaystyle{\int f(ax^2+b)xdx=\frac{1}{2a} \int f(ax^2+b)d(ax^2+b)}(a \neq 0)$；
+\\ $\displaystyle{\int f(ax^\alpha +b)x^{\alpha-1}dx=\frac{1}{\alpha a}\int f(ax^\alpha +b)d(ax^\alpha +b)(a \neq0,\alpha \neq 0)}$；
+\quad $\displaystyle{\int f(\frac{1}{x})\frac{1}{x^2}dx=-\int f(\frac{1}{x})d(\frac{1}{x})}$；
+\\ $\displaystyle{\int f(lnx)\frac{1}{x}dx=\int f(lnx)dlnx}$；
+\quad\quad\quad\quad $\displaystyle{\int f(e^{ax})e^{ax}dx=\frac{1}{a}\int f(e^{ax})de^{ax}(a \neq 0)}$；\quad $\displaystyle{\int f(sinx)cosxdx=\int f(sinx)dsinx}$；\quad\quad\quad
+\\ $\displaystyle{\int f(cosx)sinxdx=-\int f(cosx)dcosx}$ ；\quad\quad\quad\quad\quad $\displaystyle{\int f(tanx)sec^2xdx=\int f(tanx)\frac{1}{cos^2x}dx=\int f(tanx)dtanx}$；
+\\ $\displaystyle{\int f(cotx)csc^2xdx=\int f(cotx)\frac{1}{sin^2x}dx=-\int f(cotx)dcotx}$；
+\quad\quad\quad\quad $\displaystyle{\int f(secx)secxtanxdx=\int f(secx)dsecx}$；
+\\ $\displaystyle{\int f(arcsinx)\frac{1}{\sqrt{1-x^2}}dx=\int f(arcsinx)darcsinx}$；
+\\$\displaystyle{\int f(arcsinx)\frac {1}{1+x^2}dx=\int f(arctanx)darctanx}$；
+\vspace{-4mm} \subsection{第二类换元法}  \vspace{-2mm} \small 作变量的一个适当代换$x=\psi (t)$，使$f[\psi(t)]\psi'(t)$ 的原函数易求。当被积函数中含有根式而又不能凑微分时可以考虑用第二类换元积分法将被积函数有理化。很多人不理解一二类的区别，从这里可以看出一类是把好积的一块一起代换掉，而二类是把$x$本身代换，一般是三角代换。
+\\ 例2 \quad 求$\displaystyle{\int \sqrt{a^2-x^2}dx}(a>0)$
+\\\textbf{解} 求此积分难点在于根式，利用$sin^2t+cos^2t=1$来代换。设$x=asint$，$\displaystyle{\frac{\pi}{2}<t<\frac{\pi}{2}}$，那么$\sqrt{a^2-x^2}=\sqrt{a^2-a^2sint}=acost$，$dx=acostdt$，于是根式化成了三角式，所求积分化为
+\\ $$\displaystyle{\int \sqrt{a^2-x^2}dx=\int acost \cdot acost dt=a^2 \int cos^2 t dt=a^2(\frac{t}{2}+\frac{sin2t}{4})+C}.$$
+由于$x=asint$，$\displaystyle{-\frac{\pi}{2}<t<\frac{\pi}{2}}$，所以
+$$t=arcsin\frac{x}{a},$$
+$$\displaystyle{cost=\sqrt{1-sin^2t}=\sqrt{1-(\frac{x}{a})^2}=\frac{\sqrt{a^2-x^2}}{a}},$$
+于是所求积分为$\displaystyle{\int \sqrt{a^2-x^2}dx=\frac{a^2}{2}arcsin\frac{x}{a}+\frac{1}{2}x\sqrt{a^2-x^2}+C}.$
+\\第二类换元法常用的变量代换：
+
+\begin{enumerate}[(1)]
+\item 三角代换,被积函数中含有$\sqrt{a^2-x^2}$时，常用代换$x=asint$，$(\displaystyle{-\frac{\pi}{2}<t<\frac{\pi}{2}})$
+\\ 被积函数中含有$\sqrt{a^2+x^2}$时，常用代换$x=atant$，$(\displaystyle{-\frac{\pi}{2}<t<\frac{\pi}{2}})$
+\\ 被积函数中含有$\sqrt{x^2-a^2}$时，常用代换$x=\pm asect$.$(\displaystyle{0<t<\frac{\pi}{2}}).$
+\item 倒代换：$x=\frac{1}{t}$.
+\item 指数代换，被积函数由$a^x$构成，令$a^x=t$，则$\displaystyle{dx=\frac{1}{lna}\cdot \frac{dt}{t}}.$
+\item 根式代换，被积函数由$\sqrt[n]{ax+b}$构成，令$\sqrt[n]{ax+b}=t.$
+\item 万能代换，令$\displaystyle{t=tan\frac{x}{2}}$，则$x=2arctant$，$\displaystyle{sinx=\frac{2t}{1+t^2}}$，$\displaystyle{cosx=\frac{1-t^2}{1+t^2}}$，$\displaystyle{dx=\frac{2}{1+t^2}dt}$
+\end{enumerate}
+例3\quad $\displaystyle{\int \frac{dx}{3+cosx}}.$(提示：万能代换)
+\vspace{-4mm} \subsection{分部积分}  \vspace{-2mm} \small 如果被积函数是幂函数，正余弦函数，指数函数的乘积，就可以考虑分部积分法。分部积分的方法和过程相当灵活，有时需要多次运用分部积分才能求出结果。计算时会产生复原的情况，一种情况是所求积分又再次出现但系数不同，可通过移项得到结果；另一种情况时得到递推公式；第三种情况是积分又回到原形式且与积分前系数也一样，说明积分有误。
+\\分部积分的一般形式：$\displaystyle{\int udv=uv-\int vdu}.$
+\\分部积分的原则中，一是$v$要易求，二是$\displaystyle{\int vdu}$要比$\displaystyle{\int udv}$容易积分.
+例4$\displaystyle{\int \frac{sin^2x}{e^x}dx}$.
+\\ \textbf{解} $\displaystyle{\int \frac{sin^2x}{e^x}dx=\frac{1}{2}\int (1-cos2x)e^{-x}dx=\frac{1}{2}\int e^{-x}dx-\frac{1}{2}\int cos2xe^{-x}dx=-\frac{1}{2}e^{-x}-\frac{1}{2}\int cos2xe^{-x}dx,}$
+ \\ 令$\displaystyle{I=\int cos2xe^{-x}dx=\frac{1}{2}\int e^{-x}dsin2x=\frac{1}{2}e^{-x}sin2x+\frac{1}{2}\int e^{-x}sin2xdx}$
+\\ $\displaystyle{=\frac{1}{2}e^{-x}sin2x-\frac{1}{4}\int e^{-x}dcos2x}$
+\\ $\displaystyle{=\frac{1}{2}e^{-x}sin2x-\frac{1}{4}e^{-x}cos2x-\frac{1}{4}\int cos2xe^{-x}dx}$
+\\ $\displaystyle{=\frac{1}{2}e^{-x}sin2x-\frac{1}{4}e^{-x}cos2x-\frac{1}{4}I}$，
+\\ 移项解得：$\displaystyle{I=\frac{1}{5}e^{-x}(2sin2x-cos2x)+C}$,
+\\ 故原式$\displaystyle{=-\frac{1}{2}e^{-x}-\frac{1}{10}e^{-x}(2sin2x-cos2x)+C.}$
+\\ 对于分部积分取变量时，一般按照“指三幂对反”的顺序进行$u$，$v$的选取。当然也无需记住那么多诀窍，题目做多了自然就有感觉了。
+
+\vspace{-4mm} \subsection{有理函数的积分}  \vspace{-2mm} \small 两个多项式的商$\displaystyle{\frac{P(x)}{Q(x)}}$称为有理函数，又称有理分式。 一般将有理函数的积分式子分解为多项式和部分分式之和，最后分别对多项式与部分分式进行讨论积分，难点在于部分分式之和。
+\\ 例5 把$\displaystyle{\frac{2x}{x^3-x^2+x-1}}$分解为部分分式的和。
+\\ \textbf{解:}$x^3-x^2+x-1=x^2(x-1)+(x-1)=(x-1)(x^2+1)$
+\\ $\displaystyle{\frac{2x}{(x-1)(x^2+1)}=\frac{A}{x-1}+\frac{Bx+C}{x^2+1}}$
+\\ $2x=A(x^2+1)+(x-1)(Bx+C)=(A+B)x^2+(C-B)x+(A-C)$.
+\\ 比较恒等式$x$的同次幂的系数得：$A=1,B=-1,C=1$
+\\ $\displaystyle{\frac{2x}{x^3-x^2+x-1}=\frac{1}{x-1}+\frac{-x+1}{x^2+1}}$
+\\ $\therefore $其中$\displaystyle{\frac{-x+1}{x^2+1}}$为部分分式之和.
+\\ 可以看出难以积出的那部分就是部分分式之和,而其可以分为四类：
+\\ (1)$\displaystyle{\int \frac{A}{x-a}dx}$\quad (2)$\displaystyle{\int \frac{A}{(x-a)^n}dx}$
+\\ (3)$\displaystyle{\int \frac{Bx+C}{x^2+px+q}dx }$\quad(4) $\displaystyle{\int \frac{Bx+C}{(x^2+px+q)^n}dx}$
+\\ 现在我们具体讨论一下这几种分式的解决方法。
+\\ (1)$\displaystyle{\int \frac{A}{x-a}dx=A\int \frac{1}{x-a}dx=Aln|x-a|+C}$.
+\\ (2)$\displaystyle{\int \frac{A}{(x-a)^n}dx=A\int (x-a)^{-n}d(x-a)=\frac{A}{-n+1}(x-a)^{-n+1}+C=\frac{A}{1-n}\frac{1}{(x-a)^{n-1}}+C}$.
+\\ (3)$\displaystyle{\int \frac{Bx+C}{x^2+px+q}dx=\frac{1}{2}\int \frac{2Bx+2C}{x^2+px+q}dx=\frac{1}{2}\int \frac{(2Bx+Bp)+(2C-Bp)}{x^2+px+q}dx=\frac{B}{2}\int \frac{2x+p}{x^2+px+q}dx+\frac{2C-Bp}{2}\int \frac{1}{x^2+px+q}dx}$
+\\ $\displaystyle{=\frac{B}{2}\int \frac{1}{x^2+px+q}d(x^2+px+q)+\frac{2C-Bp}{2}\int \frac{dx}{(x+\frac{p}{2})^2+q-\frac{p^2}{4}}}$
+\\ $=\displaystyle{\frac{B}{2}ln(x^2+px+q)+\frac{2C-Bp}{2}\int \frac{dx}{(x+\frac{p}{2})^2+(\frac{\sqrt{4q-p^2}}{2})^2}}$
+\\ $=\displaystyle{\frac{B}{2}ln(x^2+px+q)+\frac{2C-Bp}{2}\cdot \frac{1}{\frac{\sqrt{4q-p^2}}{2}}arctan\frac{x+\frac{p}{2}}{\frac{\sqrt{4q-p^2}}{2}}+C}$.
+\\ $=\displaystyle{\frac{B}{2}ln(x^2+px+q)+\frac{2C-Bp}{\sqrt{4q-p^2}}arctan\frac{2x+p}{\sqrt{4q-p^2}}+C(p^2-4q<0)}$
+\\ (4)$\displaystyle{\int \frac{Bx+C}{(x^2+px+q)^n}dx=\frac{1}{2}\int \frac{2Bx+Bp+2C-Bp}{(x^2+px+q)^n}dx=\frac{B}{2}\int \frac{2x+p}{(x^2+px+q)^n}dx+\frac{2C-Bp}{2}\int \frac{1}{(x^2+px+q)^n}dx}$
+\\ 其中令$\displaystyle{\int \frac{2x+p}{(x^2+px+q)^n}dx=\int (x^2+px+q)^{-n}d(x^2+px+q)=\frac{1}{-n+1}(x^2+px+q)^{-n+1}+C_1}$
+\\ 然后 $\displaystyle{\frac{1}{(x^2+px+q)^n}dx=\int \frac{1}{[(x+\frac{p}{2})^2+(\frac{\sqrt{4q-p^2}}{2})^2]^n}dx}$
+\\ 令 $u=(x+dfrac{p}{2})$，$dx=du$，$a=\dfrac{\sqrt{4q-p^2}}{2}$
+\\ 则$\displaystyle{I_n=\frac{1}{(x^2+px+q)^n}dx=\int \frac{1}{[u^2+a^2]^n}du=\frac{1}{a^2}\int \frac{(u^2+a^2)-u^2} {(u^2+a^2)^n}du=\frac{1}{a^2}\int \frac{1}{(u^2+a^2)^{n-1}}du-\frac{1}{a^2}\int \frac{u^2}{(u^2+a^2)^n}du}$
+\\ $\displaystyle{=\I_{n-1}-\frac{1}{a^2}\int u\frac{1}{(u^2+a^2)^n}udu}$
+\end{document}
